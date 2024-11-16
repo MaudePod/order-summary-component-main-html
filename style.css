@@ -1,0 +1,189 @@
+:root {
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /*Neutral*/
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url(./fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+body {
+    width: 100svw;
+    min-height: 100svh;
+    container: body / inline-size;
+    background: var(--pale-blue);
+    margin: 0;
+    font-family: 'Red Hat Display';
+}
+
+main {
+    display: grid;
+    place-items: center;
+    width: 100cqw;
+    height: 100cqh;
+    container: main / inline-size;
+    background: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+section[class="order-summary-card"] {
+    display: grid;
+    place-items: center;
+    height: 80cqh;
+    width: 30cqw;
+    border-radius: 20px;
+    overflow: clip;
+    background: white;
+    container: inline-size;
+}
+
+section[class="hero-img"] {
+    width: 100%;
+    height: 100%;
+}
+
+section[class="hero-img"] svg {
+    width: 100%;
+    height: 100%;
+}
+
+section[class="card-header"] {
+    font-size: 2cqi;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+section[class="card-body"] {
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+}
+
+section[class="card-body"] span {
+    width: 80%;
+    color: var(--desaturated-blue);
+    text-align: center;
+}
+
+section[class="card-plan"] {
+    color: var(--desaturated-blue);
+    width: 80%;
+}
+
+section[class="plan"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--very-pale-blue);
+    padding: 5% 2% 5% 2%;
+    border-radius: 15px;
+}
+
+section[class="plan-price"] {
+    font-size: 1.2cqi;
+    text-wrap: nowrap;
+}
+
+section[class="price-title"] {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+section[class="price-ammount"]{
+    font-weight: 500;
+}
+section[class="plan-icon"] {
+    display: grid;
+    place-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+section[class="plan-icon"] svg {
+    width: 100%;
+    height: 100%;
+}
+
+section[class="plan-action"] {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+section[class="card-action"] {
+    display: grid;
+    width: 80%;
+    gap: 20px;
+    font-weight: 700;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+button[class="pay"] {
+    background: var(--bright-blue);
+    box-shadow: 1px 1px 1px 1px var(--pale-blue);
+}
+
+button[class="pay"] {
+    background: var(--bright-blue);
+    box-shadow: 0px 12px 12px 0px var(--pale-blue);
+    color: var(--very-pale-blue)
+}
+
+button[class="pay"]:hover {
+    filter: brightness(1.5);
+    font-weight: 900;
+}
+
+button[class="cancel"] {
+    background: white;
+    color: var(--desaturated-blue);
+}
+
+button[class="cancel"]:hover {
+    font-weight: 900;
+}
+div[class="attribution"] {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+svg[id="svgs"] {
+    display: none;
+}
+
+@container main (inline-size < 800px) {
+    section[class="order-summary-card"] {
+        width: 90cqw;
+    }
+
+    section[class="card-header"] {
+        font-size: 5cqi;
+    }
+
+    section[class="plan-price"] {
+        font-size: 3cqi;
+        align-content: center;
+    }
+
+    section[class="plan"] {
+        grid-template-columns: min-content 1fr 1fr;
+        column-gap: 10px;
+    }
+
+    main {
+        background: url(./images/pattern-background-mobile.svg);
+    }
+}
