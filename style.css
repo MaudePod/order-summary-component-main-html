@@ -19,7 +19,7 @@ body {
     container: body / inline-size;
     background: var(--pale-blue);
     margin: 0;
-    font-family: 'Red Hat Display';
+    font-family: 'Red Hat Display','sans-serif';
 }
 
 main {
